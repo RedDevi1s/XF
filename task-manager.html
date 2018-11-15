@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>任务协作</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link href="css/sb-admin.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/exDemoTasks.css" />
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/simple-sidebar.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- Custom Fonts -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+  <!--
+      HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <nav id="nav">
+    <div class="logo">
+      <a href="index1.html"><img id="logo" src="assets/logo.png" /></a>
+    </div>
+    <div class="tag_container">
+      <a href="online-disk.html" class="tag">文档管理</a>
+	  <a href="task-manager.html" class="tag"> 小组协作</a>
+      <span class="tag">视频会议</span> <span class="tag">实用功能</span>
+      <span class="tag">通讯录</span> <span class="tag">个人信息</span>
+    </div>
+  </nav>
+
+  <div id="wrapper">
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav side-nav">
+        <li>
+          <a href="javascript:;" style="color:white" data-toggle="collapse" data-target="#task"><i class="fa fa-fw fa-folder"></i>
+            任务
+            <i class="fa fa-fw fa-caret-down"></i></a>
+          <ul id="task" class="collapse in">
+            <li>
+              <a href="#" style="color:white"><i class="fa fa-fw fa-files-o"></i>&nbsp;我参与的任务</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="mission_item_container">
+
+            <a href="javascript:;" style="color:white" data-toggle="collapse" data-target="#project"><i class="fa fa-fw fa-folder"></i>
+              项目
+              <i class="fa fa-fw fa-caret-down"></i></a>
+            <span class="dropdown" id="add_project">
+              <span class="dropdown-toggle mission_item_down" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="true">
+                <span class="glyphicon glyphicon-option-vertical"></span>
+              </span>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" data-toggle="modal" data-target="#mission_modal">
+                <li><a href="#">创建项目</a></li>
+              </ul>
+            </span>
+          </div>
+          <ul id="project" class="collapse in">
+            <li>
+              <a href="#" style="color:white"><i class="fa fa-fw fa-files-o"></i> &nbsp;科研社区项目</a>
+            </li>
+            <li>
+              <a href="#" style="color:white"><i class="fa fa-fw fa-file-photo-o"></i> &nbsp;其他项目</a>
+            </li>
+            <li class="active">
+              <a href="#" style="color:white"><i class="fa fa-fw fa-file-audio-o"></i> &nbsp;其他项目1</a>
+            </li>
+            <li>
+              <a href="#" style="color:white"><i class="fa fa-fw fa-file-video-o"></i> &nbsp;其他项目2</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="page-content-wrapper">
+      <div style="min-height: 660px; height: auto !important; height: 100%;">
+        <div id="task_container">
+          <div style="display:flex;	overflow-x: auto;">
+            <div class="task_tip ">
+              <div class="menu_down dropdown">
+                <div class="navbar-brand" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <span class="glyphicon glyphicon-collapse-down"></span>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="personDemo" style="width: 300px;">
+                  <li class="text-center">
+                    <h4>列表菜单</h4>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-pencil"></span>
+                      编辑列表
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-plus"></span>
+                      在此后添加列表
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-user"></span>
+                      设置本列表执行者
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-briefcase"></span>
+                      设置本列表截止时间
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-log-out"></span>
+                      移动本里表所有任务
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-duplicate"></span>
+                      复制本里表所有任务
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-sort-by-alphabet"></span>
+                      归档本里表所有任务
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-trash"></span> 删除列表
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <h4>需求分析 <span></span></h4>
+              <div class="like_btn_control clearfix ">
+                <ul class="nav navbar-nav">
+                  <li><input type="checkbox" /></li>
+                  <li>
+                    <p>确定总体功能描述</p>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                  <li><input type="checkbox" /></li>
+                  <li>
+                    <p>详细需求分析</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="addTask">
+                <span data-toggle="collapse" data-target="#addCollapse">
+                  <span class="glyphicon glyphicon-plus-sign"></span> 添加任务
+                </span>
+                <!-- <form class="form-horizontal"> -->
+                <div id="addCollapse">
+                  <textarea class="form-control" placeholder="任务描述"></textarea>
+                  <span class="glyphicon glyphicon-time task-icon"></span>
+                  <span class="glyphicon glyphicon-user task-icon"></span>
+                  <div>
+                    <button class="btn btn-primary" type="submit">
+                      确定
+                    </button>
+                    <button class="btn btn-default" data-toggle="collapse" data-target="#addCollapse" type="submit">
+                      取消
+                    </button>
+                  </div>
+                </div>
+                <!-- </form> -->
+              </div>
+            </div>
+            <div class="task_tip">
+              <div class="menu_down dropdown">
+                <div class="navbar-brand" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <span class="glyphicon glyphicon-collapse-down"></span>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="personDemo" style="width: 300px;">
+                  <li class="text-center">
+                    <h4>列表菜单</h4>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-pencil"></span>
+                      编辑列表
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-plus"></span>
+                      在此后添加列表
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-user"></span>
+                      设置本列表执行者
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-briefcase"></span>
+                      设置本列表截止时间
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-log-out"></span>
+                      移动本里表所有任务
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-duplicate"></span>
+                      复制本里表所有任务
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-sort-by-alphabet"></span>
+                      归档本里表所有任务
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-trash"></span> 删除列表
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <h4>详细设计<span></span></h4>
+              <div class="like_btn_control clearfix ">
+                <ul class="nav navbar-nav">
+                  <li><input type="checkbox" /></li>
+                  <li>
+                    <p>数据库设计</p>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                  <li><input type="checkbox" /></li>
+                  <li>
+                    <p>编码</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="addTask">
+                <span class="glyphicon glyphicon-plus-sign"></span> 添加任务
+              </div>
+            </div>
+            <div class="task_tip">
+              <div class="menu_down dropdown">
+                <div class="navbar-brand" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <span class="glyphicon glyphicon-collapse-down"></span>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="personDemo" style="width: 300px;">
+                  <li class="text-center">
+                    <h4>列表菜单</h4>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-pencil"></span>
+                      编辑列表
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-plus"></span>
+                      在此后添加列表
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-user"></span>
+                      设置本列表执行者
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-briefcase"></span>
+                      设置本列表截止时间
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-log-out"></span>
+                      移动本里表所有任务
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-duplicate"></span>
+                      复制本里表所有任务
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-sort-by-alphabet"></span>
+                      归档本里表所有任务
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#createPro">
+                      <span class="glyphicon glyphicon-trash"></span> 删除列表
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <h4>测试与维护<span></span></h4>
+              <div class="like_btn_control clearfix ">
+                <ul class="nav navbar-nav">
+                  <li><input type="checkbox" /></li>
+                  <li>
+                    <p>测试用户登录逻辑</p>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                  <li><input type="checkbox" /></li>
+                  <li>
+                    <p>测试任务管理是否有bug</p>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                  <li><input type="checkbox" /></li>
+                  <li>
+                    <p>测试文档管理是否有bug</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="addTask">
+                <span class="glyphicon glyphicon-plus-sign"></span> 添加任务
+              </div>
+            </div>
+            <div class="new_task_tip ">
+              <span class="glyphicon glyphicon-plus"></span> 新建任务列表....
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="新建任务列表...." />
+                </div>
+                <div class="clearfix">
+                  <input type="button" class="btn btn-primary pull-right" value="保存" />
+                  <input type="button" class="btn btn-default btn-link pull-right" value="取消" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- /.container-fluid -->
+    </div>
+
+    <!-- /#page-wrapper -->
+  </div>
+  <div id="footer">
+    <div class="container text-center">
+      Copyright©2018 中国科学院核能安全技术研究所 版权所有 站长统计
+    </div>
+  </div>
+  <!-- /#wrapper -->
+  <div class="modal fade" id="mission_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">创建项目</h4>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" style="padding:16px;">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="项目名称" />
+            </div>
+            <div class="form-group">
+              <label for="project_desc" class="control-label">项目描述</label>
+              <div class="controls">
+                <div class="textarea">
+                  <textarea class="form-control" rows="3" id="project_desc"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="project_desc" class="control-label">项目成员</label>
+              <span class="glyphicon glyphicon-user task-icon"></span>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            取消
+          </button>
+          <button type="button" class="btn btn-primary">确定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

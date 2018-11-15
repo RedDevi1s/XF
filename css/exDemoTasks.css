@@ -1,0 +1,132 @@
+.boxShadow{
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=135, Strength=5);/*for ie6,7,8*/  
+	background-color: white;  
+	-moz-box-shadow:0 2px 5px #969696;/*firefox*/  
+	-webkit-box-shadow:0 2px 5px #969696;/*webkit*/  
+	box-shadow:0 2px 5px #969696;/*opera或ie9*/ 
+}
+ul,li{
+	padding: 0;
+	margin: 0;
+}
+.menu_down{
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+}
+.menu_down:hover{
+	color: deepskyblue;
+}
+.like_btn_control ul{
+	width: 100%;
+	border-left:2px solid orange ;
+	margin-bottom:2px ;
+	cursor: pointer;
+	background: white;
+}
+.like_btn_control li{
+	padding: 10px;
+	vertical-align:middle;
+}
+.addTask{
+	margin-top: 20px;
+	padding: 10px ;
+	color: deepskyblue;
+	font-weight: bold;
+	font-size: 15px;
+	cursor: pointer;
+}
+.addTask:hover{
+	background-color: #F5F5F5;
+}
+#task_container{
+	position: relative;
+	/* min-width: 1000px; */
+	/* height: 600px; */
+	display: flex;
+	/* overflow-x: auto; */
+	/* width: 100%; */
+	flex-grow: 1;
+	flex-wrap: nowrap;
+	/* flex-direction: column; */
+	/* height: 100%; */
+	/* max-width: 1000px; */
+}
+#task_container .task_tip{
+	background: #ECECEC;
+	width: 280px;
+	padding: 10px;
+	height: 600px;
+	min-width: 280px;
+	max-width: 280px;
+	/* float: left; */
+	margin-right: 10px;
+	/* position: relative; */
+	/* flex-grow: 1; */
+}
+#task_container .new_task_tip{
+	background: #ECECEC;
+	width: 280px;
+	/* min-width: 280px; */
+	min-width: 280px;
+	max-width: 280px;
+	/* float: left; */
+	line-height: 60px;
+	font-size: 15px;
+	padding:0 10px 10px 10px;
+	color: darkgray;
+	cursor: pointer;
+	/* flex-grow: 1; */
+
+}
+#task_container .new_task_tip:hover{
+	color: deepskyblue;
+}
+
+.menu_down{
+	display: none;
+  }
+
+.mission_item_container{
+	/* display: flex; */
+	/* align-content: space-around; */
+	/* align-items: center;
+	justify-content: space-between; */
+	width: 225px;
+	position: relative;
+}
+.mission_item_container>a{
+	padding: 15px 15px;
+	display: block;
+}
+.mission_item_down{
+	padding: 10px;
+}
+.glyphicon-option-vertical{
+	margin: 0 !important;
+	cursor: pointer;
+	color: white;
+}
+
+.dropdown-menu>li>a{
+	/* color: white; */
+}
+#wrapper > div.collapse.navbar-collapse.navbar-ex1-collapse > ul > li> div > span > ul > li > a:hover{
+	background-color:#ccc !important;
+}
+
+#page-content-wrapper{
+	min-width: 800px;
+}
+#wrapper{
+	min-width: 800px;
+}
+
+#add_project{
+	position: absolute;
+	top: 16px;
+	right: 5%;
+    /* transform: translate(-50%, -50%); */
+
+}
