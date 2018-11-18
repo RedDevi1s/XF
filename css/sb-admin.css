@@ -153,7 +153,16 @@ ul.alert-dropdown {
 .side-nav>li>ul>li>a:hover {
     color: #fff;
 }
+.second_nav{
+    display: block;
+    padding: 10px 15px 10px 64px;
+    text-decoration: none;
+    color: #999;
+}
+.second_nav:hover{
+    color: #fff;
 
+}
 /* Flot Chart Containers */
 
 .flot-chart {
