@@ -60,3 +60,20 @@ a:hover {
   padding: 4px;
   margin-top: 10px;
 }
+
+.task_bar{
+  height: 50px;
+  background: #ECECEC;
+  margin-bottom: 16px;
+}
+
+.task_span{
+  font-size: 16px;
+  line-height: 50px;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  /* background: #fff */
+}
+#project_downmenu{
+  position: relative;
+}

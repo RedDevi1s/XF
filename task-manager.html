@@ -69,23 +69,9 @@
           </ul>
         </li>
         <li>
-          <a href="javascript:;" style="color:white" data-toggle="collapse" data-target="#task"><i class="fa fa-fw fa-folder"></i>
+          <a href="javascript:;" style="color:white"><i class="fa fa-fw fa-folder"></i>
             科研论坛
-            <i class="fa fa-fw fa-caret-down"></i></a>
-          <ul id="task" class="collapse in">
-            <li>
-              <a href="#" style="color:white"><i class="fa fa-fw fa-files-o"></i>&nbsp;登陆</a>
-            </li>
-            <li>
-              <a href="#" style="color:white"><i class="fa fa-fw fa-files-o"></i>&nbsp;注册</a>
-            </li>
-            <li>
-              <a href="#" style="color:white"><i class="fa fa-fw fa-files-o"></i>&nbsp;修改密码</a>
-            </li>
-            <li>
-              <a href="#" style="color:white"><i class="fa fa-fw fa-files-o"></i>&nbsp;退出</a>
-            </li>
-          </ul>
+            </a>
         </li>
         <li>
             <a href="javascript:;" style="color:white" data-toggle="collapse" data-target="#team"><i class="fa fa-fw fa-folder"></i>
@@ -109,53 +95,23 @@
             </li>
           </ul>
         </li>
-        <li>
-          <div class="mission_item_container">
-
-            <a href="javascript:;" style="color:white" data-toggle="collapse" data-target="#project"><i class="fa fa-fw fa-folder"></i>
-              项目
-              <i class="fa fa-fw fa-caret-down"></i></a>
-            <span class="dropdown" id="add_project">
-              <span class="dropdown-toggle mission_item_down" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="true">
-                <span class="glyphicon glyphicon-option-vertical"></span>
-              </span>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" data-toggle="modal" data-target="#mission_modal">
-                <li><a href="#">创建项目</a></li>
-              </ul>
-            </span>
-          </div>
-          <ul id="project" class="collapse in">
-              <li>
-                  <a href="javascript:;" style="color:white" data-toggle="collapse" data-target="#project_inner"><i class="fa fa-fw fa-folder"></i>
-                    任务
-                    <i class="fa fa-fw fa-caret-down"></i></a>
-                  <ul id="project_inner" class="collapse in">
-                    <li>
-                      <a class="second_nav" href="#" style="color:white"><i class="fa fa-fw fa-files-o"></i>&nbsp;我参与的任务</a>
-                    </li>
-                  </ul>
-                </li>
-            <li>
-              <a href="#" style="color:white"><i class="fa fa-fw fa-files-o"></i> &nbsp;科研社区项目</a>
-            </li>
-            <li>
-              <a href="#" style="color:white"><i class="fa fa-fw fa-file-photo-o"></i> &nbsp;其他项目</a>
-            </li>
-            <li class="active">
-              <a href="#" style="color:white"><i class="fa fa-fw fa-file-audio-o"></i> &nbsp;其他项目1</a>
-            </li>
-            <li>
-              <a href="#" style="color:white"><i class="fa fa-fw fa-file-video-o"></i> &nbsp;其他项目2</a>
-            </li>
-          </ul>
-        </li>
       </ul>
     </div>
     <div id="page-content-wrapper">
+      <div class="task_bar">
+          <div class="dropdown" style="display:inline-block">
+            <span class="task_span" id="project_downmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">项目<i class="fa fa-fw fa-caret-down"></i></span>
+            <ul class="dropdown-menu" aria-labelledby="project_downmenu">
+                <li><a href="#">项目1</a></li>
+                <li><a href="#">项目2选中 <i class="glyphicon glyphicon-ok"></i></a></li>
+              </ul>
+          </div>
+        <span class="task_span" data-toggle="modal" data-target="#project_modal">创建项目</span>
+        <span class="task_span">我参与的任务</span>
+      </div>
       <div style="min-height: 660px; height: auto !important; height: 100%;">
         <div id="task_container">
-          <div style="display:flex;	overflow-x: auto;">
+          <div id="task_container2" style="display:flex;	overflow-x: auto;">
             <div class="task_tip ">
               <h4>需求分析 <span></span></h4>
               <div class="like_btn_control clearfix ">
@@ -172,24 +128,12 @@
                   </li>
                 </ul>
               </div>
-              <div class="addTask">
-                <span data-toggle="collapse" data-target="#addCollapse">
+              <div class="addTask" data-toggle="modal" data-target="#mission_modal">
+                <span>
                   <span class="glyphicon glyphicon-plus-sign"></span> 添加任务
                 </span>
                 <!-- <form class="form-horizontal"> -->
-                <div id="addCollapse">
-                  <textarea class="form-control" placeholder="任务描述"></textarea>
-                  <span class="glyphicon glyphicon-time task-icon"></span>
-                  <span class="glyphicon glyphicon-user task-icon"></span>
-                  <div>
-                    <button class="btn btn-primary" type="submit">
-                      确定
-                    </button>
-                    <button class="btn btn-default" data-toggle="collapse" data-target="#addCollapse" type="submit">
-                      取消
-                    </button>
-                  </div>
-                </div>
+
                 <!-- </form> -->
               </div>
             </div>
@@ -266,7 +210,7 @@
     </div>
   </div> -->
   <!-- /#wrapper -->
-  <div class="modal fade" id="mission_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal fade" id="project_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -303,11 +247,82 @@
       </div>
     </div>
   </div>
+  <div class="modal fade" id="mission_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">创建任务</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal" style="padding:16px;">
+              <div class="form-group">
+                <label for="project_desc" class="control-label">任务描述</label>
+                <div class="controls">
+                  <div class="textarea">
+                    <textarea class="form-control" rows="3" id="project_desc"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="project_desc" class="control-label">成员</label>
+                <span class="glyphicon glyphicon-user task-icon"></span>
+              </div>
+              <div class="form-group">
+                  <label for="project_desc" class="control-label">截止时间</label>
+                  <span class="glyphicon glyphicon-user task-icon"></span>
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              取消
+            </button>
+            <button type="button" class="btn btn-primary">确定</button>
+          </div>
+        </div>
+      </div>
+    </div>
   <!-- jQuery -->
   <script src="js/jquery.js"></script>
 
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
+  <script>
+        let container = document.querySelector("#task_container2")
+        //判断浏览器
+        let isIE = navigator.userAgent.match(/MSIE (\d)/i);
+        isIE = isIE ? isIE[1] : undefined;
+        let isFF = /FireFox/i.test(navigator.userAgent);
+ 
+        if (isIE < 9) //传统浏览器使用MouseWheel事件
+        container.attachEvent("onmousewheel", function (e) {
+                //计算鼠标滚轮滚动的距离
+                //一格3行，每行40像素
+                let v = e.wheelDelta / 2;
+                container.scrollLeft += v;
+                //阻止浏览器默认方法
+                return false;
+            });
+        else if (!isFF) //除火狐外的现代浏览器也使用MouseWheel事件
+        container.addEventListener("mousewheel", function (e) {
+                //计算鼠标滚轮滚动的距离
+                let v = -e.wheelDelta / 2;
+                container.scrollLeft += v;
+                //阻止浏览器默认方法
+                e.preventDefault();
+            }, false);
+        else //火狐使用DOMMouseScroll事件
+        container.addEventListener("DOMMouseScroll", function (e) {
+                //计算鼠标滚轮滚动的距离
+                //一格是3行，但是要注意，这里和像素不同的是它是负值
+                container.scrollLeft += e.detail * 80;
+                //阻止浏览器默认方法
+                e.preventDefault();
+            }, false);
+  </script>
 </body>
 
 </html>
