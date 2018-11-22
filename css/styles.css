@@ -84,3 +84,6 @@ a:hover {
 #project_downmenu{
   position: relative;
 }
+.link_icon>span{
+  color: black;
+}
