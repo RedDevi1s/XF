@@ -97,3 +97,15 @@ a:hover {
   width: 20px;
   height: 20px;
 }
+#chat_img{
+  /* width: 20px; */
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  background-color: #4e8cff;
+  border-radius: 50%;
+}
+#chat_img>img{
+  width: 60px;
+  height: 60px;
+}

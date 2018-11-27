@@ -1,10 +1,11 @@
 $(function() {
   // You can add Users inside JSON users section
   var _json = {
-    users: ["Gupi Gain", "Bagha Bain", "Hirak Raja"],
+    // users: ["Gupi Gain", "Bagha Bain", "Hirak Raja"],
+    users: ["建模"],
     chats: [
       {
-        from: "Gupi Gain",
+        from: "建模",
         msg: "Mora Dujonai Rajar Jamai!",
         time: "1533263925814",
         action: ""
@@ -16,13 +17,13 @@ $(function() {
         action: ""
       },
       {
-        from: "Gupi Gain",
+        from: "建模",
         msg: "Mora Khai Dai Ghuri Firi!",
         time: "1533263925814",
         action: ""
       },
       {
-        from: "Gupi Gain",
+        from: "建模",
         msg: "Aha ki Moder Chiri!",
         time: "1533263925814",
         action: ""
@@ -47,8 +48,7 @@ $(function() {
         "<ul></ul>" +
         "</div>" +
         '<div class="sendBox">' +
-        '<input type="text" placeholder="enter next line ' +
-        user.split(" ")[0] +
+        '<input type="text" placeholder="输入聊天内容' +
         '...">' +
         "</div>";
       $("#viewport").append(parentString);
