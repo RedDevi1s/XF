@@ -48,7 +48,7 @@ a:link {
 }
 
 a:visited {
-  color: #fff;
+  color: #fff
   text-decoration: none;
 }
 
@@ -56,6 +56,22 @@ a:hover {
   color: #fff;
   text-decoration: none;
 }
+
+a:link.filelist {
+  color: #333;
+  text-decoration: none;
+}
+
+a:visited.filelist  {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover.filelist {
+  color: #000;
+  text-decoration: none;
+}
+
 .task-icon{
   padding: 4px;
   margin-top: 10px;
@@ -96,16 +112,4 @@ a:hover {
 .filefolder-icon>img{
   width: 20px;
   height: 20px;
-}
-#chat_img{
-  /* width: 20px; */
-  position: fixed;
-  right: 25px;
-  bottom: 25px;
-  background-color: #4e8cff;
-  border-radius: 50%;
-}
-#chat_img>img{
-  width: 60px;
-  height: 60px;
 }
