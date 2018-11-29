@@ -113,3 +113,8 @@ a:hover.filelist {
   width: 20px;
   height: 20px;
 }
+
+#video-iframe{
+  min-height: 600px;
+  min-width: 1200px;
+}
